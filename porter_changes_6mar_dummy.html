@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+
+  <head>
+  <style>
+   body {background-color: blanchedalmond;}
+   h1 {color: rgb(16, 139, 98);
+       font-family:Verdana, Geneva, Tahoma, sans-serif}
+   p {color: black;} 
+  </style>  
+    <meta charset="utf-8" />
+    <meta name="google" content="notranslate" />
+    <script>
+      window.fcWidgetMessengerConfig = {
+        config: {
+          fullscreen: true,
+          siteId: 'porter',
+          appName: 'Porter-Karmalife Support',
+          headerProperty: {
+            hideChatButton: true
+          },
+        }
+      }
+    </script>
+    <script>
+      window.fcSettings = {
+        onInit: function () {
+          console.log("Init setting user properties");
+          window.fcWidget.setExternalId("9972115337"); //has to be unique per user (use mobile number)
+          window.fcWidget.user.setFirstName("Porter");
+          window.fcWidget.user.setLastName("test");
+          window.fcWidget.user.setPhone("9972115337"); //Karmalife mobile number
+          window.fcWidget.user.setProperties({
+            current_number: "9972115337",                 // Cuurent number with porter
+            status: "Active"                // ass additional details user level
+          });
+          window.fcWidget.on("user:created", function (resp) {
+            console.log('User has been created');
+            console.log(resp)
+            //Function to do some task
+          });
+        }
+      }
+    </script>
+    <script src='//in.fw-cdn.com/31189653/549736.js' chat='true'>  </script>
+
+
+    <script type="text/javascript">
+      var openWidget = function () {
+        document.getElementById("fc_frame").style.visibility = "visible";
+        window.fcWidget.open();
+        initEvents();
+      };
+      var initEvents = function () {
+        window.fcWidget.on("widget:opened", function (resp) {
+          document.getElementById("custom_fc_button").style.visibility = "hidden";
+        });
+        window.fcWidget.on("widget:closed", function (resp) {
+          document.getElementById("custom_fc_button").style.visibility =
+            "visible";
+        });
+      };
+    </script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      #imageicon {
+        height: 30%;
+        width: 30%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      Testin FC
+    </h1>
+    <div id="custom_fc_button">
+      <a id="open_fc_widget" onClick="openWidget()" style="cursor: pointer;"><img id="imageicon" src="https://i.ibb.co/R9FYnL4/2203537-chat-conversation-message-talk-icon.png" /></a>
+    </div>
+  </body>
+
+</html>
