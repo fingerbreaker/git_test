@@ -26,12 +26,12 @@
       window.fcSettings = {
         onInit: function () {
           console.log("Init setting user properties");
-          window.fcWidget.setExternalId("9972115337"); //has to be unique per user (use mobile number)
-          window.fcWidget.user.setFirstName("Porter");
-          window.fcWidget.user.setLastName("test");
-          window.fcWidget.user.setPhone("9972115337"); //Karmalife mobile number
+          window.fcWidget.setExternalId("9886400852"); //has to be unique per user (use mobile number)
+          window.fcWidget.user.setFirstName("abc");
+          window.fcWidget.user.setLastName("def");
+          window.fcWidget.user.setPhone("9886400852"); //Karmalife mobile number
           window.fcWidget.user.setProperties({
-            current_number: "9972115337",                 // Cuurent number with porter
+            current_number: "9886400852",                 // Cuurent number with porter
             status: "Active"                // ass additional details user level
           });
           window.fcWidget.on("user:created", function (resp) {
@@ -42,7 +42,10 @@
         }
       }
     </script>
-    <script src='//in.fw-cdn.com/31189653/549736.js' chat='true'>  </script>
+    <script
+    src='//in.fw-cdn.com/31189653/549736.js'
+    chat='true' widgetId='013150c1-0fcc-4456-93cf-ba69bb5da3e7'>
+    </script>
 
 
     <script type="text/javascript">
@@ -74,7 +77,7 @@
 
   <body>
     <h1>
-      Testin FC
+      Testing FC
     </h1>
     <div id="custom_fc_button">
       <a id="open_fc_widget" onClick="openWidget()" style="cursor: pointer;"><img id="imageicon" src="https://i.ibb.co/R9FYnL4/2203537-chat-conversation-message-talk-icon.png" /></a>
